@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "fastapi-block-hunter"
+version = "0.0.1"
+description = "A FastAPI-based block hunter application"
+authors = ["Manuel Angel Suarez Alvarez <Manuel_Angel99@outlook.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "fastapi_block_hunter"}]
+homepage = "https://github.com/yourusername/fastapi-block-hunter"
+repository = "https://github.com/yourusername/fastapi-block-hunter"
+keywords = ["fastapi", "block-hunter"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: FastAPI",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {version = "0.103.2"}
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.1"
+pyright = "^1.1.391"
+twine = "^5.0.0"
+uvicorn = "^0.34.0"
+httptools = "^0.6.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
