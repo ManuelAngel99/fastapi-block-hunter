@@ -9,6 +9,8 @@ It works by:
 
 This allows you to identify the blocking call that has blocked the event loop and print the stack trace of the blocking call.
 
+![Sample logs showing blocking call detection](docs/sample_logs.jpg)
+
 ## 📦 Installation
 
 ```bash
@@ -23,12 +25,12 @@ To use the package, you need to add the middleware to your FastAPI application a
 from fastapi import FastAPI
 from fastapi_block_hunter import add_block_hunter_middleware, setup_asyncio_debug_mode
 
-# You may set up the asyncio debug mode by defining ASYNCIO_DEBUG_MODE=1 as an environment variable.
+# You may set up the asyncio debug mode by defining ASYNgCIO_DEBUG_MODE=1 as an environment variable.
 # Or by calling the setup_asyncio_debug_mode function in your app lifespan
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await setup_asyncio_debug_mode(verbose=True)
+    await setup_asyncio_debug_mode()
     yield {}
 
 
@@ -73,6 +75,8 @@ app = add_custom_slow_callback_logger(app)
 ```
 
 ## 📚 Documentation
+
+A complete example of how to use the package can be found in the [example/app.py](example/app.py) file.
 
 ## 📄 License
 

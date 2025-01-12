@@ -28,6 +28,7 @@ pyright = "^1.1.391"
 twine = "^5.0.0"
 uvicorn = "^0.34.0"
 httptools = "^0.6.4"
+httpx = "^0.28.1"
 
 [build-system]
 requires = ["poetry-core"]

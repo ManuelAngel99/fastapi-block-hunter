@@ -38,7 +38,7 @@ def format_source_traceback(source_traceback: list[traceback.FrameSummary]) -> s
 
 def log_blocking_fastapi_code(handle: Handle, endpoint_url: URL) -> str:
     """Check if the handle comes from a FastAPI endpoint and generate log message if it does."""
-    msg = f"The event loop has been blocked while processing request:\nURL: {endpoint_url}"
+    msg = f"the event loop has been blocked while processing request:\nURL: {endpoint_url}"
     cb = handle._callback  # type: ignore
     cb_self = getattr(cb, "__self__", None)
 
